@@ -10,4 +10,4 @@ Also, here you can check the original (Spanish).
 - José Borja Castillo Sánchez, under the direction of Mr. Gabriel Valencia Miranda.
 
 ## License
- This project is covered by [MIT](https://opensource.org/licenses/MIT).
+ This project is covered by [GPL](http://www.gnu.org/licenses/quick-guide-gplv3.html).
