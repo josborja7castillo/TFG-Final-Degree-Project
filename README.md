@@ -6,6 +6,11 @@ Also, here you can get more documentation in [Spanish](https://github.com/josbor
 ## Work in progress!
 
 
+This repository will be divided into three sections: 
+- One for documentation and snapshots.
+- One for Microcontroller's code.
+- The last one for the GUI.
+
 ## Author
 - José Borja Castillo Sánchez, under the direction of Mr. Gabriel Valencia Miranda.
 
