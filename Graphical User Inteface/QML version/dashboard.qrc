@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>fonts/DejaVuSans.ttf</file>
+        <file>images/fuel-icon.png</file>
+        <file>images/temperature-icon.png</file>
+        <file>qml/dashboard.qml</file>
+        <file>qml/DashboardGaugeStyle.qml</file>
+        <file>qml/IconGaugeStyle.qml</file>
+        <file>qml/TachometerStyle.qml</file>
+        <file>qml/TurnIndicator.qml</file>
+        <file>qml/ValueSource.qml</file>
+        <file>fonts/bahnschrift.ttf</file>
+        <file>images/background.png</file>
+        <file>images/background-no-circle.png</file>
+        <file>images/circle.png</file>
+        <file>images/circle-transparent.png</file>
+        <file>images/circle-empty.png</file>
+        <file>images/side-menu.png</file>
+        <file>images/complete.png</file>
+        <file>images/coolant.png</file>
+        <file>images/engine-coolant.png</file>
+        <file>images/engine-temperature.png</file>
+        <file>images/oil-pressure.png</file>
+    </qresource>
+</RCC>
