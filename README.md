@@ -4,7 +4,7 @@ Trabajo Fin de Grado perteneciente como parte del currículo del grado
 en Ingeniería de Sistemas Electrónicos de la [Universidad de Málaga](https://www.uma.es/etsi-de-telecomunicacion/)
 Esta rama va a estar dedicada principalmente a la publicación de la memoria oficial, el resto de la documentación se encuentra en la rama "master" en inglés.
 
-## Work in progress! Lanzamiento 1 de septiembre
+## Work in progress! 
 
 
 ## Autor
