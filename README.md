@@ -1,5 +1,7 @@
 # Final Degree Project: Development of a data visualization and acquisition system for automotive electronics
 
+[![Foo](https://github.com/josborja7castillo/TFG-Final-Degree-Project/blob/master/Hardware/image5.jpg)]
+
 Final Degree Project as part of my Electronic Systems B. E at [Universidad de Málaga](https://www.uma.es/etsi-de-telecomunicacion/).
 Also, here you can get more documentation in [Spanish](https://github.com/josborja7castillo/TFG-Final-Degree-Project/tree/Spanish).
 
@@ -14,7 +16,7 @@ The aim was to achieve a fully Open Source, completely functional "full-stack" p
 
 ## Current state
 Lower two sections are functional, currently working to improve GUI smoothness.
-Looking to add CAN Bus software capability and porting GUI to Android.
+Expecting to add CAN Bus software capability and porting GUI to Android soon.
 
 ## MEL: Minimum Equipment List
 To further develop and improve this project, it is advisable to have at least, these items:
