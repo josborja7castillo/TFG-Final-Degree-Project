@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dashboard</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QNeedleIndicator" name="tachometer">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>320</y>
+      <width>661</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="max" stdset="0">
+     <double>7.000000000000000</double>
+    </property>
+    <property name="value">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="gap_angle" stdset="0">
+     <double>90.000000000000000</double>
+    </property>
+    <property name="animated">
+     <bool>false</bool>
+    </property>
+    <property name="majorTicks">
+     <number>8</number>
+    </property>
+    <property name="labelFont">
+     <font>
+      <family>SansSerif</family>
+      <pointsize>6</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="digitFont">
+     <font>
+      <family>SansSerif</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="label">
+     <string>x1000 RPM</string>
+    </property>
+    <property name="labelOffset">
+     <double>0.900000000000000</double>
+    </property>
+   </widget>
+   <widget class="ManoMeter" name="turbo_manometer">
+    <property name="geometry">
+     <rect>
+      <x>1110</x>
+      <y>20</y>
+      <width>300</width>
+      <height>300</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Shows the pressure</string>
+    </property>
+    <property name="whatsThis">
+     <string>The bar meter widget displays the pressure attached to it</string>
+    </property>
+    <property name="maximum">
+     <double>3.000000000000000</double>
+    </property>
+    <property name="value">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="nominal">
+     <double>1.000000000000000</double>
+    </property>
+    <property name="critical">
+     <double>2.200000000000000</double>
+    </property>
+    <property name="prefix">
+     <string/>
+    </property>
+    <property name="suffix">
+     <string> bar</string>
+    </property>
+    <property name="valueOffset">
+     <double>-90.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>1230</x>
+      <y>850</y>
+      <width>351</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="time_label">
+       <property name="font">
+        <font>
+         <family>Courier 10 Pitch</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Time</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="day_label">
+       <property name="font">
+        <font>
+         <family>DejaVu Sans</family>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Day</string>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::NoTextInteraction</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLCDNumber" name="speedLCD">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>690</y>
+      <width>241</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="digitCount">
+     <number>3</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Filled</enum>
+    </property>
+    <property name="value" stdset="0">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="intValue" stdset="0">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="ThermoMeter" name="water_thermometer">
+    <property name="geometry">
+     <rect>
+      <x>1440</x>
+      <y>360</y>
+      <width>120</width>
+      <height>350</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Shows the pressure</string>
+    </property>
+    <property name="whatsThis">
+     <string>The bar meter widget displays the pressure attached to it</string>
+    </property>
+    <property name="minimum">
+     <double>30.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>130.000000000000000</double>
+    </property>
+    <property name="value">
+     <double>80.000000000000000</double>
+    </property>
+    <property name="nominal">
+     <double>60.000000000000000</double>
+    </property>
+    <property name="critical">
+     <double>100.000000000000000</double>
+    </property>
+    <property name="suffix">
+     <string> ºC</string>
+    </property>
+   </widget>
+   <widget class="ManoMeter" name="fuel_gauge">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>20</y>
+      <width>300</width>
+      <height>300</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Shows the pressure</string>
+    </property>
+    <property name="whatsThis">
+     <string>The bar meter widget displays the pressure attached to it</string>
+    </property>
+    <property name="maximum">
+     <double>65.500000000000000</double>
+    </property>
+    <property name="nominal">
+     <double>25.000000000000000</double>
+    </property>
+    <property name="critical">
+     <double>60.000000000000000</double>
+    </property>
+    <property name="suffix">
+     <string> MPa</string>
+    </property>
+    <property name="valueOffset">
+     <double>-90.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="ThermoMeter" name="oil_thermometer">
+    <property name="geometry">
+     <rect>
+      <x>1590</x>
+      <y>360</y>
+      <width>120</width>
+      <height>350</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Shows the pressure</string>
+    </property>
+    <property name="whatsThis">
+     <string>The bar meter widget displays the pressure attached to it</string>
+    </property>
+    <property name="minimum">
+     <double>30.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>180.000000000000000</double>
+    </property>
+    <property name="value">
+     <double>65.000000000000000</double>
+    </property>
+    <property name="nominal">
+     <double>90.000000000000000</double>
+    </property>
+    <property name="critical">
+     <double>130.000000000000000</double>
+    </property>
+    <property name="suffix">
+     <string> ºC</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="turbo_label">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>250</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Courier 10 Pitch</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>TURBO</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="fuel_label">
+    <property name="geometry">
+     <rect>
+      <x>891</x>
+      <y>260</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Courier 10 Pitch</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>FUEL PRESS</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="water_label">
+    <property name="geometry">
+     <rect>
+      <x>1470</x>
+      <y>710</y>
+      <width>62</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Courier 10 Pitch</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>WATER</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="oil_label">
+    <property name="geometry">
+     <rect>
+      <x>1620</x>
+      <y>710</y>
+      <width>62</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Courier 10 Pitch</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>OIL</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="kmph_label">
+    <property name="geometry">
+     <rect>
+      <x>861</x>
+      <y>760</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>km/h</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="stop_label">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>380</y>
+      <width>101</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nice</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="text">
+     <string>STOP</string>
+    </property>
+   </widget>
+   <widget class="ManoMeter" name="MAF">
+    <property name="geometry">
+     <rect>
+      <x>1430</x>
+      <y>20</y>
+      <width>300</width>
+      <height>300</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Shows the pressure</string>
+    </property>
+    <property name="whatsThis">
+     <string>The bar meter widget displays the pressure attached to it</string>
+    </property>
+    <property name="maximum">
+     <double>655.350000000000023</double>
+    </property>
+    <property name="nominal">
+     <double>700.000000000000000</double>
+    </property>
+    <property name="critical">
+     <double>500.000000000000000</double>
+    </property>
+    <property name="suffix">
+     <string> g/s</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maf_label">
+    <property name="geometry">
+     <rect>
+      <x>1540</x>
+      <y>270</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Courier 10 Pitch</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>MAF RATE</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDashboard">
+    <property name="title">
+     <string>Dashboard</string>
+    </property>
+    <widget class="QMenu" name="menuUser_Interface_Configuration">
+     <property name="title">
+      <string>User Interface Configuration</string>
+     </property>
+     <widget class="QMenu" name="menuVisible_Items">
+      <property name="title">
+       <string>Visible Items</string>
+      </property>
+      <addaction name="actionTachometer"/>
+      <addaction name="actionPressure_gauge"/>
+      <addaction name="actionSpeedometer"/>
+      <addaction name="actionTurbo_pressure"/>
+      <addaction name="actionOil_temperature"/>
+      <addaction name="actionWater_temperature"/>
+      <addaction name="actionDate_and_time"/>
+      <addaction name="actionMAF_rate"/>
+     </widget>
+     <widget class="QMenu" name="menuSet_ranges">
+      <property name="title">
+       <string>Set ranges</string>
+      </property>
+     </widget>
+     <addaction name="menuVisible_Items"/>
+     <addaction name="menuSet_ranges"/>
+    </widget>
+    <addaction name="separator"/>
+    <addaction name="menuUser_Interface_Configuration"/>
+    <addaction name="actionLink_Configuration"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuDashboard"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionLink_Configuration">
+   <property name="text">
+    <string>Link Configuration</string>
+   </property>
+  </action>
+  <action name="actionTachometer">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Tachometer</string>
+   </property>
+  </action>
+  <action name="actionPressure_gauge">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Pressure gauge</string>
+   </property>
+  </action>
+  <action name="actionSpeedometer">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Speedometer</string>
+   </property>
+  </action>
+  <action name="actionTurbo_pressure">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Turbo pressure</string>
+   </property>
+  </action>
+  <action name="actionOil_temperature">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Oil temperature</string>
+   </property>
+  </action>
+  <action name="actionWater_temperature">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Water temperature</string>
+   </property>
+  </action>
+  <action name="actionDate_and_time">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Date and time</string>
+   </property>
+  </action>
+  <action name="actionTachometer_limit">
+   <property name="text">
+    <string>Tachometer limit</string>
+   </property>
+  </action>
+  <action name="actionOil_temperature_alarm">
+   <property name="text">
+    <string>Oil temperature alarm</string>
+   </property>
+  </action>
+  <action name="actionWater_temperature_alarm">
+   <property name="text">
+    <string>Water temperature alarm</string>
+   </property>
+  </action>
+  <action name="actionMAF_rate">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>MAF rate</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ManoMeter</class>
+   <extends>QWidget</extends>
+   <header>analogwidgets/manometer.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ThermoMeter</class>
+   <extends>QWidget</extends>
+   <header>analogwidgets/thermometer.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QNeedleIndicator</class>
+   <extends>QWidget</extends>
+   <header>qneedleindicator.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

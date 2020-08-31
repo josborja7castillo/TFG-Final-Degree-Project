@@ -1,10 +1,7 @@
-# Microcontroller Code README
-----
-This section contains all the necessary files to run a KWP2000 implementation on a TM4C123GH6PM microcontroller from Texas Instruments.
+# MCU-backend README
 
-## Author
-- José Borja Castillo Sánchez, under the direction of Mr. Gabriel Valencia Miranda.
+### This section contains all the necessary files to run a KWP2000 implementation on a TM4C123GH6PM Microcontroller from Texas Instruments.
+---
+Please respect all licenses terms present in this page. 
 
-## License
- This project is covered by [GPL](http://www.gnu.org/licenses/quick-guide-gplv3.html).
- Please respect all licenses terms 
+#### José Borja Castillo Sánchez, 2020. 
