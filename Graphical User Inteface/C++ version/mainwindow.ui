@@ -79,7 +79,7 @@
      <string>The bar meter widget displays the pressure attached to it</string>
     </property>
     <property name="maximum">
-     <double>3.000000000000000</double>
+     <double>2.550000000000000</double>
     </property>
     <property name="value">
      <double>0.000000000000000</double>
@@ -94,7 +94,7 @@
      <string/>
     </property>
     <property name="suffix">
-     <string> bar</string>
+     <string>bar</string>
     </property>
     <property name="valueOffset">
      <double>-90.000000000000000</double>
@@ -105,7 +105,7 @@
      <rect>
       <x>1230</x>
       <y>850</y>
-      <width>351</width>
+      <width>461</width>
       <height>80</height>
      </rect>
     </property>
@@ -226,13 +226,13 @@
      <string>The bar meter widget displays the pressure attached to it</string>
     </property>
     <property name="maximum">
-     <double>65.500000000000000</double>
+     <double>765.000000000000000</double>
     </property>
     <property name="nominal">
-     <double>25.000000000000000</double>
+     <double>250.000000000000000</double>
     </property>
     <property name="critical">
-     <double>60.000000000000000</double>
+     <double>600.000000000000000</double>
     </property>
     <property name="suffix">
      <string> MPa</string>

@@ -36,7 +36,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionMAF_rate, SIGNAL(triggered()), this, SLOT(visible_items()));
     connect(ls,SIGNAL(speedChanged(int)),this,SLOT(update_speed(int)));
     connect(ls,SIGNAL(fuel_pressChanged(int)),this,SLOT(update_fuel_press(int)));
-    connect(ls,SIGNAL(turbo_pressChanged(double)),this,SLOT(update_turbo_press(double)));
+    connect(ls,SIGNAL(turbo_pressChanged(unsigned int)),this,SLOT(update_turbo_press(unsigned int)));
     connect(ls,SIGNAL(maf_rateChanged(double)),this,SLOT(update_maf_rate(double)));
     connect(ls,SIGNAL(water_tempChanged(int)),this,SLOT(update_water_temp(int)));
     connect(ls,SIGNAL(RPM_valueChanged(double)),this,SLOT(update_RPM_value(double)));
@@ -76,9 +76,9 @@ void MainWindow::update_fuel_press(int value)
     ui->fuel_gauge->setValue(value);
 }
  
-void MainWindow::update_turbo_press(double val)
+void MainWindow::update_turbo_press(unsigned int val)
 {
-    ui->turbo_manometer->setValue(val);
+    ui->turbo_manometer->setValue((double)val * 0.01);
 }
 
 void MainWindow::update_maf_rate(double val)
@@ -184,9 +184,7 @@ void MainWindow::readSettings()
     QSettings *settings = new QSettings(path+"/"+filename,QSettings::NativeFormat);
 
     settings->beginGroup("mainwindow");
-    //this->setStyleSheet( (settings->value("styleSheet", "background-color: black;").toString()) );
     set_tacho_limit(settings->value("tachometerVal",7).toInt());
-    //Oil and water alarm
     ui->tachometer->setVisible( settings->value("tachoVisible",true).toBool() );
     ui->speedLCD->setVisible( settings->value("speedoVisible",true).toBool() );
     ui->kmph_label->setVisible( settings->value("speedLabelVisible",true).toBool() );
@@ -217,9 +215,7 @@ void MainWindow::writeSettings()
     QSettings *settings = new QSettings(path+"/"+filename,QSettings::NativeFormat);
     settings->beginGroup("mainwindow");
     settings->setValue("size",window()->size());
-    //settings->setValue("styleSheet",this->styleSheet());
     settings->setValue("tachometerVal",(int) ui->tachometer->getMaxValue() );
-//    settings->setValue("oilAlarm",ui->oil_thermo) and water
     settings->setValue("tachoVisible",ui->tachometer->isVisible());
     settings->setValue("speedoVisible",ui->speedLCD->isVisible());
     settings->setValue("speedoLabelVisible",ui->kmph_label->isVisible());

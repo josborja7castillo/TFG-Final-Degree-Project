@@ -36,7 +36,7 @@ public slots:
 
     void update_speed(int value);
     void update_fuel_press(int value);
-    void update_turbo_press(double val);
+    void update_turbo_press(unsigned int val);
     void update_maf_rate(double val);
     void update_water_temp(int val);
     void update_oil_temp(int val);

@@ -110,7 +110,7 @@ private slots:
 signals:
     void speedChanged(int value);
     void fuel_pressChanged(int value);
-    void turbo_pressChanged(double value);
+    void turbo_pressChanged(unsigned int value);
     void maf_rateChanged(double value);
     void water_tempChanged(int value);
     void oil_tempChanged(int value);

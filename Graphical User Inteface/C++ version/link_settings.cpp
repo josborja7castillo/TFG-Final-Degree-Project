@@ -215,19 +215,7 @@ int dataContainer::find_header(QByteArray &data, int len, int pos)
         nextpos = (pos+1) % len;
         curr = (uint8_t)data.at(pos);
         next = (uint8_t)data.at(nextpos);
-        /*
-        if( ( curr > 0x80 )  && ( next == 0xF1) )
-            found = true;
-        else if( (curr > 0x80) && (prev==0x0A) )
-            found = true;
-        else
-        {
-            if(pos < (len-1))
-                pos++;
-            else
-                return -1;
-        }
-        */
+
         if( (curr >> 7) & 0x01)
         {
             if( (next == 0xF1) || (prev == 0x0A) )
@@ -299,7 +287,7 @@ void link_settings::process_KWPOBDData(const QByteArray &data)
             }
             case INTAKE_PRESS:
             {
-                    double v = (double) data[5] / 100;
+                    unsigned int v = (unsigned int) data[5];
                     emit turbo_pressChanged(v);
                 break;
             }
@@ -414,11 +402,6 @@ void Worker::process()
             }
             else
             {
-                /*
-                //If we were not able to find a header, discard the message and start again.
-                dataIn.remove(0,dataIn.size()); // By no means, the most efficient way.
-                continue;
-                */
                 int first;
                 int l = 0;
                 if(find_rpr_end(dataIn,first,l))
@@ -447,7 +430,7 @@ void Worker::process()
                     if(dc->getDataSize() < len)
                         while(1);
                     emit newData();//emits signal
-                   // QThread::currentThread()->yieldCurrentThread();
+
                 }
                 else if(capable < len)
                 {
@@ -468,7 +451,7 @@ void Worker::process()
                         while(1);
                     emit newData();//emit signal.
                     mutex->unlock();
-                    //QThread::currentThread()->yieldCurrentThread();
+
                 }
 
             }
@@ -485,7 +468,7 @@ void Worker::process()
                     if(dc->getDataSize() < len)
                         while(1);
                     emit newData();//emit signal;
-                    //QThread::currentThread()->yieldCurrentThread();
+
                 }
                 else if(capable < leftToRead)
                 {
@@ -505,7 +488,7 @@ void Worker::process()
                         while(1); //it gets stuck here.
                     emit newData();//emits signal.
                     mutex->unlock();
-                   // QThread::currentThread()->yieldCurrentThread();
+
                 }
 
             }
