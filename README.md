@@ -1,5 +1,9 @@
 # Final Degree Project: Development of a data visualization and acquisition system for automotive electronics
 
+## General Block Diagram
+![Foo](https://github.com/josborja7castillo/TFG-Final-Degree-Project/blob/master/bdd.png)
+
+## Hardware view
 ![Foo](https://github.com/josborja7castillo/TFG-Final-Degree-Project/blob/master/Hardware/image5.jpg)
 
 Final Degree Project as part of my Electronic Systems B. E at [Universidad de Málaga](https://www.uma.es/etsi-de-telecomunicacion/).
